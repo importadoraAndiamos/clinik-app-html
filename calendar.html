@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <!-- css del plugin full calendar -->
+        <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
+
+        <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <title> Admin </title>
+    </head>
+    <body>
+        <input type="checkbox" id="nav_toggle">
+
+
+        <!-- Sidebar lateral-->
+        <div class="sidebar">
+            <!-- Sección del logo -->
+            <div class="sidebar_logo">
+                <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
+            </div>
+
+            <!--Secciones del menu-->
+            <div class="sidebar_menu">
+                <div class="sidebar_user">
+                    <img src="assets/imagenes/Dra-user.jpg" alt="">
+                    <span>Dra. Juliana Rodriguez</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <a id="home" href="">
+                            <i class="fas fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="calendario" href="" class="active">
+                            <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="historia_clinica" href="">
+                            <i class="fas fa-file-signature"></i> <span>Historia Clínica</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <!-- Fecha -->
+            <div class="header_info">
+                <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
+            
+                <span>servicioalcliente@zaabrasalud.co</span>
+            </div> 
+            <!-- Sidebar header -->
+            <header>
+                <!-- Botón de despliegue -->
+                <h2>
+                    <label for="nav_toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                </h2>
+                <!-- Usuario  -->
+                <div class="user-wrapper">
+                    <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                    <div>
+                        <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <!--Framewor Agenda-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Calendario</a></li>
+                    </ol>
+                </nav>
+
+                <div class="containt_calendario" id="basic-table">
+                    <div class="head_calendar">
+                        <h1>Mi Calendario</h1>
+                        <span>Administre su calendario de citas</span>
+                    </div>
+
+                    <!-- <div class="contains_option_days">
+                        <h2 class="dias no_disponible"><i></i> Días no disponibles</h2>
+                        <h2 class="dias"><i></i> Días disponibles</h2>
+                    </div> -->
+                
+                    <div class="calendario">
+                        <div id='calendar'></div>
+                    </div>
+                </div> 
+            </main>
+
+            <!--  Modal agendar cita -->
+            <div class="modal fade" id="agendar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- header -->
+                        <div class="modal-header head_modal">
+                            <h1 id="exampleModalLabel">Agendar cita</h1>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- Body -->
+                        <div class="modal-body body_modal">
+                            <form method="POST" action="" id="">
+                                <label for="cita_disponible"> Cita disponible </label>
+                                <div class="content_items_cita">
+                                    <div class="inputText_cita">
+                                        <input class="" type="radio" value="" id="" name="">
+                                        <ul class="items_cita">
+                                            <li>Dr. Wilmar Andres Salamanca Rengifo</li>
+                                            <li>8:00am - 10:00am</li> 
+                                        </ul>
+                                    </div>
+
+                                    <div class="inputText_cita">
+                                        <input class="" type="radio" value="" id="" name="">
+                                        <ul class="items_cita">
+                                            <li>Dra. Angela Fernandez</li>
+                                            <li>01:00pm - 02:00pm</li> 
+                                        </ul>
+                                    </div>
+
+                                    <div class="inputText_cita">
+                                        <input class="" type="radio" value="" id="" name="">
+                                        <ul class="items_cita">
+                                            <li>Dra. Katalina Jimenez</li>
+                                            <li>07:00am - 09:00am</li> 
+                                        </ul>
+                                    </div>
+
+                                    <div class="inputText_cita">
+                                        <input class="" type="radio" value="" id="" name="">
+                                        <ul class="items_cita">
+                                            <li>Dr. David Galeano</li>
+                                            <li>03:00pm - 04:00pm</li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="ui-widget">
+                                    <input id="tags" class="form-control" placeholder="Ingrese número de documento">
+                                    <i class="far fa-check-circle"></i>
+                                    <!-- <i class="far fa-times-circle"></i> -->
+                                </div>
+
+                                <div class="content_textArea_citas">
+                                    <label for="cita_disponible" class="">Descripción</label>
+                                    <textarea class="" name="descripcion_cita" id="descripcion_cita" cols="30" rows="10"></textarea>
+                                </div>
+
+                                <div class="content_consultorio_citas">
+                                    <label for="cita_disponible" class="">Consultorio</label>
+                                    <input class="form-control" type="text" value="" id="consultorio" name="consultorio">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="footer_modal">    
+                           <button type="submit" class="" id="">Cancelar</button>
+                         
+                            <button type="submit" class="" id="">Agendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Modal ver cita -->
+            <div class="modal fade modalC" id="ver_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- header -->
+                        <div class="modal-header head_modal">
+                            <h1 class="" id="exampleModalLabel">Cita <label id=""></label></h1>
+                            
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- Body -->
+                        <div class="modal-body body_modal">
+                            <div class="items_verCita">
+                                <h5 class="" id="">Laura León</h5>
+
+                                <ul class="">
+                                    <li class="" id="" >Jueves, 12 de mayo</li>
+                                    <li class="" id="">10:47 - 11:47 a.m</li>
+                                </ul>
+                                
+                                <h5 class="" id="">Tipo de cita</h5>
+                                <ul class="">
+                                    <li class="" id="">Presencial</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sección botón Pagar -->
+                        <div class="footer_modal">
+                            <button type="submit" class="" id="editar-cita-btn-profesional" data-id>Editar cita</button>
+
+                            <button type="submit" class="" id="cancelar-cita-btn-profesional">Cancelar cita </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+        <!-- Scrip para fullcalendar -->
+        <script src='assets/plugin/full_calendar/lib/main.js'></script>
+        <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
+        <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+        
+        <script src='assets/js/menu-lateral.js'></script> 
+    </body>
+</html>

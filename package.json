@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fullcalendar": "^5.9.0",
+    "node-sass": "^6.0.1"
+  }
+}
