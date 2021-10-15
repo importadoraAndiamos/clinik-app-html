@@ -115,6 +115,33 @@
                 </div> 
             </main>
 
+
+
+
+            <!--  Modal gestionar cita -->
+            <div class="modal fade" id="gestionar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- header -->
+                        <div class="modal-header head_modal">
+                            <h1 id="exampleModalLabel">Agendar cita</h1>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <!-- footer -->
+                        <div class="footer_modal p-5">    
+                           <button type="submit" class="" id=""> Ver cita </button>
+                         
+                            <button type="submit" class="" id="select_agendar"> Agendar cita </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <!--  Modal agendar cita -->
             <div class="modal fade" id="agendar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -184,9 +211,9 @@
                         </div>
 
                         <div class="footer_modal">    
-                           <button type="submit" class="" id="">Cancelar</button>
-                         
                             <button type="submit" class="" id="">Agendar</button>
+
+                            <button type="submit" class="select_cancel" id="">Cancelar</button>
                         </div>
                     </div>
                 </div>
@@ -218,15 +245,50 @@
                                 <ul class="">
                                     <li class="" id="">Presencial</li>
                                 </ul>
+
+                                <div class="content_textArea_citas">
+                                    <label for="cita_disponible" class="">Descripción</label>
+                                    <textarea class="" name="descripcion_cita" id="descripcion_cita" cols="30" rows="10"></textarea>
+                                </div>
+
+                                <div class="content_consultorio_citas">
+                                    <label for="cita_disponible" class="">Consultorio</label>
+                                    <input class="form-control" type="text" value="" id="consultorio" name="consultorio">
+                                </div>
                             </div>
                         </div>
 
                         <!-- Sección botón Pagar -->
                         <div class="footer_modal">
-                            <button type="submit" class="" id="editar-cita-btn-profesional" data-id>Editar cita</button>
+                            <button type="submit" class="" id="select_edit">Editar cita</button>
 
-                            <button type="submit" class="" id="cancelar-cita-btn-profesional">Cancelar cita </button>
+                            <button type="submit" class="select_cancel" id="">Cancelar cita </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  Modal eliminar cita -->
+            <div class="modal fade modalC" id="eliminar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- header -->
+                        <div class="modal-header head_modal">
+                            <h1 class="" id="exampleModalLabel">Cita <label id=""></label></h1>
+                            
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- Body -->
+                        <div class="modal-body p-5">
+                            <div class="items_deleted_quote">
+                                <h3 class="" id=""> Cita cancelada </h3>
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

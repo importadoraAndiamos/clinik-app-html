@@ -76,9 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
             //display: 'background'
         }],
 
-        // Modal agendar cita
+        // Modal gestionar cita
         dateClick: function(info) {
-            $('#agendar_cita').modal('show');
+
+            $('#gestionar_cita').modal('show');
         },
 
         // Modal ver cita
@@ -92,9 +93,33 @@ document.addEventListener('DOMContentLoaded', function() {
             //alert('selected ' + info.startStr + ' to ' + info.endStr);
         },
     });
-      
+
+    // Función para ocultar modal gestionar cita y mostrar el modal de agendar cita
+    $("#select_agendar").on( "click", function() {
+
+        $('#gestionar_cita').modal('hide');
+        $('#agendar_cita').modal('show');
+    });
+
+    // Función para ocultar modal agendar cita o ver cita y mostrar el modal cita eliminada
+    $(".select_cancel").on( "click", function() {
+
+        $('#agendar_cita').modal('hide');
+        $('#ver_cita').modal('hide');
+        $('#eliminar_cita').modal('show');
+    });
+
+
+    $("#select_edit").on( "click", function() {
+
+        $('#ver_cita').modal('hide');
+        $('#agendar_cita').modal('show');
+    });
+
+
     calendar.render();    
 });
+
 
 $( function() {
   var availableTags = [

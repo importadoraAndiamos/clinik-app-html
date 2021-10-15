@@ -127,3 +127,19 @@
 .items_verCita li::marker{
     color: var(--primary-color);
 }
+// Modal eliminar cita
+.items_deleted_quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items_deleted_quote h3 {
+    font-size: 1.5em;
+    font-family: 'Quicksand';
+    margin: 0;
+}
+.items_deleted_quote i {
+    font-size: 1.3em;
+    width: 50px;
+    text-align: center;
+}

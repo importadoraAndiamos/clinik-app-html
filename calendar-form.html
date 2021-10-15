@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <!-- css del plugin full calendar -->
+        <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
+
+        <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <title> Admin </title>
+    </head>
+    <body>
+        <input type="checkbox" id="nav_toggle">
+
+        <!-- Sidebar lateral-->
+        <div class="sidebar">
+            <!-- Sección del logo -->
+            <div class="sidebar_logo">
+                <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
+            </div>
+
+            <!--Secciones del menu-->
+            <div class="sidebar_menu">
+                <div class="sidebar_user">
+                    <img src="assets/imagenes/Dra-user.jpg" alt="">
+                    <span>Dra. Juliana Rodriguez</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <a id="home" href="">
+                            <i class="fas fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="calendario" href="" class="active">
+                            <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="historia_clinica" href="">
+                            <i class="fas fa-file-signature"></i> <span>Historia Clínica</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <!-- Fecha -->
+            <div class="header_info">
+                <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
+            
+                <span>servicioalcliente@zaabrasalud.co</span>
+            </div> 
+            <!-- Sidebar header -->
+            <header>
+                <!-- Botón de despliegue -->
+                <h2>
+                    <label for="nav_toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                </h2>
+                <!-- Usuario  -->
+                <div class="user-wrapper">
+                    <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                    <div>
+                        <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Calendar-form</a></li>
+                    </ol>
+                </nav>
+
+                <div class="container">
+                    <form method="POST" action="" id="">
+                        <div class="card_form">
+                            <h1>Datos de configuración</h1>
+
+                            <div class="configuration_data_form">
+                                <div class="select_date_form">
+                                    <label for=""> Fecha de duración </label>
+
+                                    <select id="" class="form-control" name="">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="select_date_form">
+                                    <label for=""> Después de la fecha </label>
+
+                                    <select id="" class="form-control" name="">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="button_save_form">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data">
+                                    <i class="far fa-question-circle"></i>
+                                </button>
+                                
+                                <button> Guardar <i class="far fa-save"></i> </button>
+                            </div>
+                        </div>
+
+                        <div class="card_form">
+                            <h1> Agregar horario </h1>
+
+                            <div class="configuration_data_form">
+                                <ul>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Lunes </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Martes </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Miércoles </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Jueves </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Viernes </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Sábado </li>
+                                    <li> <input class="" type="radio" value="" id="" name=""> Domingo </li>
+                                </ul>
+                            </div>
+
+                            <div class="configuration_data_form">
+                                <div class="select_date_form">
+                                    <label for=""> Hora inicio </label>
+
+                                    <select id="" class="form-control" name="">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="select_date_form">
+                                    <label for=""> Hora fin </label>
+
+                                    <select id="" class="form-control" name="">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="button_save_form">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data">
+                                    <i class="far fa-question-circle"></i>
+                                </button>
+                                
+                                <button> Agregar <i class="fas fa-plus"></i> </button>
+                            </div>
+
+                            <div class="configuration_table_form">
+                                <h1> Horarios </h1>
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Días</th>
+                                            <th scope="col">Horas</th>
+                                            <th scope="col">Acción</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+ 
+                                            <td>Lunes - Miércoles</td>
+                                            <td>10:00am - 11:00am</td>
+                                            <td>Eliminar</td>
+                                        </tr>
+                                        <tr>
+                              
+                                            <td>Martes - Jueves</td>
+                                            <td>01:00pm - 03:00pm</td>
+                                            <td>Anexar</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+        </div>
+ 
+
+        <!-- Scrip para fullcalendar -->
+        <script src='assets/plugin/full_calendar/lib/main.js'></script>
+        <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
+        <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+        
+        <script src='assets/js/menu-lateral.js'></script> 
+    </body>
+</html>
