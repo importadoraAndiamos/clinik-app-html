@@ -498,6 +498,14 @@ td .status {
     grid-template-columns: 100%;
   }
 }
+.agenda_path ol {
+  background: var(--secund-color) !important;
+}
+
+.agenda_path ol li a {
+  color: var(--primary-color) !important;
+}
+
 .head_calendar h1 {
   font-size: 2.2em;
   font-family: "Quicksand";
@@ -807,6 +815,163 @@ td .status {
 
 .configuration_table_form table {
   margin-top: 3%;
+}
+
+.patient_form {
+  border: 2px solid rgba(0, 174, 199, 0.45);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.form_row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input_add_file {
+  height: 220px;
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input_add_file img {
+  width: 178px;
+  height: 185px;
+  border: 1px solid #00AEC7;
+  border-radius: 106px;
+}
+
+.input_add_file input {
+  width: 178px;
+  height: 220px;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.input_add_file label {
+  margin: 0;
+  font-family: "Roboto";
+  text-align: center;
+  width: 178px;
+  align-self: flex-end;
+}
+
+.buttom_save_form {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0 2em;
+}
+
+.buttom_save_form button {
+  width: 125px;
+  border: 1px solid #00aec7;
+  background: #00aec7;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buttom_save_form button:hover {
+  color: #CDF5FF;
+}
+
+@media (min-width: 768px) {
+  .data_row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .patient_form {
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+.main_row {
+  justify-content: center;
+}
+
+.sidebar_logo img {
+  height: 55px;
+  width: auto;
+}
+
+.content_form {
+  margin-top: 7%;
+  padding: 3.5px;
+  border: 1px solid rgba(0, 174, 199, 0.45);
+}
+
+.card_login {
+  padding: 2em 1em;
+  background-color: #a2daff;
+  background: linear-gradient(20deg, #a2daff 10%, #c4eff8 50%, #cdf5ff 80%);
+}
+
+.card_login label {
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #232323;
+}
+
+.buttom_save {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.buttom_save button {
+  width: 125px;
+  border: 1px solid #00aec7;
+  background: #00aec7;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.buttom_save button:hover {
+  color: #CDF5FF;
+}
+
+@media (min-width: 768px) {
+  .sidebar_logo img {
+    height: 75px;
+    width: auto;
+  }
+
+  .content_form {
+    margin-top: 5%;
+  }
+
+  .card_login {
+    padding: 6em 1em;
+  }
+}
+@media (min-width: 1024px) {
+  .content_form {
+    margin-top: 3%;
+  }
+
+  .data_row {
+    padding: 0;
+  }
+
+  .buttom_save_form {
+    padding: 0 1em;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
