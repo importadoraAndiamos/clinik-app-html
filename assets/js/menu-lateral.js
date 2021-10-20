@@ -1,35 +1,3 @@
-!function() {
-    let queryRuta = window.location.pathname;
-    // Condicionales de la validación de cada una de las rutas para remover y adicionar las clases descritas.
-    if (queryRuta.includes("dashboard.html")) {
-
-        $('#home').removeClass('active');
-        $('#home').addClass('selected');
-
-        $('#calendario').removeClass('active');
-        $('#historia_clinica').removeClass('active');
-    }
-
-    else if (queryRuta.includes("citas")) {
-
-        $('#cita_padre').removeClass('actived');
-        $('#cita_padre').addClass('citaPadre');
-
-        $('#cita1').removeClass('actived');
-        $('#cita1').addClass('unactived');
-    }
-
-    else if (queryRuta.includes("calendario")) {
-
-        $('#cita_padre').removeClass('actived');
-        $('#cita_padre').addClass('citaPadre');
-
-        $('#cita0').removeClass('actived');
-        $('#cita0').addClass('unactived');
-    }
-}();
-
-
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {

@@ -38,15 +38,16 @@
     width: 178px;
     align-self: flex-end;
 }
-.buttom_save_form {
+.btn_save_formPatient {
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    padding: 0 2em;
+    padding: 0 1.5em;
 }
-.buttom_save_form button {
+.btn_save_formPatient button {
     width: 125px;
     border: 1px solid #00aec7;
+    border-radius: 3px;
     background: #00aec7;
     color: #fff;
     font-family: "Roboto";
@@ -55,7 +56,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.buttom_save_form button:hover {
+.btn_save_formPatient button:hover {
     color: #CDF5FF;
 }
 @media(min-width: 768px) {
@@ -66,7 +67,19 @@
 }
 @media(min-width: 1024px) {
     .patient_form {
-        width: 75%;
+        width: 85%;
+        margin: auto;
+        margin-top: 5%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    .btn_save_formPatient {
+        padding: 0 .5em;
+    }
+}
+@media (min-width: 1920px) {
+    .patient_form {
+        width: 65%;
         margin: auto;
         margin-top: 5%;
         padding-top: 1.5em;
