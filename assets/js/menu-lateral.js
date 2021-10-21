@@ -1,18 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
+    
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
 
+        //themeSystem: 'bootstrap',
 
-        // Botones de mes, semana y día.
+        // Posiciona los botones del título, mes, semana y día.
         headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridDay'// se elimina el botón de la opción semana "timeGridWeek" 
+            left: 'title today',
+            center: '',
+            right: 'dayGridMonth,timeGridDay prev,next',// se elimina el botón de la opción semana "timeGridWeek"   
+        },
+
+        customButtons: {
+            myCustomButton: {
+                text: 'custom!',
+                color: 'red',
+                click: function() {
+                    alert('clicked the custom button!');
+                }
+            }
         },
 
         // Propiedad para cambio de lenguaje
         locale: 'es',
+
         // Evento de mensaje de alerta 
         dateClick: function (event)
         {
@@ -46,14 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Modal gestionar cita
         dateClick: function(info) {
-
             $('#gestionar_cita').modal('show');
         },
 
         // Modal ver cita
         eventClick: function(info) {
             console.log(info.event);
-
             $('#ver_cita').modal();
         },
         
@@ -61,6 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
             //alert('selected ' + info.startStr + ' to ' + info.endStr);
         },
     });
+
+
+
+
 
     // Función para ocultar modal gestionar cita y mostrar el modal de agendar cita
     $("#select_agendar").on( "click", function() {
@@ -83,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#ver_cita').modal('hide');
         $('#agendar_cita').modal('show');
     });
-
 
     calendar.render();    
 });
