@@ -1,6 +1,7 @@
 .main_content {
     transition: margin-left 300ms;
     margin-left: 300px;
+    background: #f1f5f9;
 }
 /*Función paraa cambiar dimenciones de los elementos a la hora de replegar el sidebar*/
 #nav_toggle:checked~.main_content {
@@ -9,7 +10,7 @@
 main {
     margin-top: 70px;
     padding: 2rem 1.5rem;
-    background: #f1f5f9;
+    background: transparent;
     min-height: calc(100vh - 70px);
 }
 
