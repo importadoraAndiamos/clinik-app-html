@@ -88,7 +88,7 @@
                 </div>
             </header>
 
-            <main class="container">
+            <main class="">
                 <nav aria-label="breadcrumb" class="agenda_path">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -97,66 +97,159 @@
                 </nav>
 
                 <form>
-                    <div class="patient_form">
+                    <div class="main_target_form">
                         <div class="form_row">
-                            <!-- <div class="col-12 col-md-4 col-xl-3">
-                                <div class="col-8 form-group input_add_file">
-                                    <img src="" alt="">
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    <label for="inputPassword4">Add file</label>
-                                </div>
-                            </div> -->
+                            <!-- Basic data patient -->
+                            <h2 class="col-12 title_section_form">Personal information</h2>
 
-                            <div class="col-12 col-md-12 col-xl-12 data_row">
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputEmail4">Name</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                            <div class="col-8 col-md-3 col-xl-2 imgUser_container_form">
+                                <img src="" alt="" class="img_user_form">
+                                <input type="file" class="input_imgUser_form" id="">
+                                <label for="" class="label_imgUser_form">User photo</label>
+                            </div>
+
+                            <div class="col-12 col-md-9 col-xl-10 data_row_form">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Name</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputPassword4">Last name</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Last name</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
                                 </div>
 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputEmail4">Type id card</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Type id card</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputPassword4">Id card</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Id card</label>
+                                    <input type="number" class="input_dataGroup_form" id="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Date of birth</label>
+                                    <input type="date" class="input_dataGroup_form" id="">
+                                </div>
+                                
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Place of birth</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
                                 </div>
 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Age</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputPassword4">Medical security</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Gender</label>
+                                    <select name="" id="" class="input_dataGroup_form">
+                                        <option value="" selected> Select gender </option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Feminine</option>
+                                    </select>
                                 </div>
 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputEmail4">Celphone</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Occupation</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+
+                                <div class="col-md-6 col-xl-4 data_group_form">
+                                    <label for="">Marital status</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+                            </div>
+
+                            <!-- Contacts and address Patient -->
+                            <h2 class="col-12 title_section_form">Contacts and address</h2>
+
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Celphone</label>
+                                    <input type="number" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 px-md-2">
-                                    <label for="inputPassword4">Phone</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Landline</label>
+                                    <input type="number" class="input_dataGroup_form" id="">
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">E-mail</label>
+                                    <input type="email" class="input_dataGroup_form" id="">
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Resident address</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Neighbordhood</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Town</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+                            </div>
+
+                            <!-- Medical security Patient -->
+                            <h2 class="col-12 title_section_form">Medical security</h2>
+
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Promoting entity</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">Contributory regime</label>
+                                    <input type="text" class="input_dataGroup_form" id="">
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 data_group_form">
+                                    <label for="">State</label>
+                                    <ul class="row m-0">
+                                        <li class="col-4 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Active</li>
+                                        <li class="col-4 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Unactive</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Medical security Patient -->
+                            <h2 class="col-12 title_section_form">Additional Information</h2>
+
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-8 data_group_form">
+                                    <label for="">Observation</label>
+                                    <textarea name="" id="" cols="30" rows="10" class="textArea_form"></textarea>
+                                </div>
+                                
+                                <div class="col-md-4 data_group_form">
+                                    <label for="">Patient's status</label>
+                                    <ul class="row m-0">
+                                        <li class="col-12 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Active</li>
+                                        <li class="col-12 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Unactive</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group btn_save_formPatient">
-                            <button type="submit" class="btn">Save <i class="fas fa-save"></i> </button>
+                        <div class="button_container_form">
+                            <button type="submit" class="button_cancel_form">Cancel<i class="fas fa-times-circle"></i> </button>
+                            <button type="submit" class="button_save_form">Save<i class="fas fa-save"></i> </button>
                         </div>
                     </div>
                 </form>
             </main>
-
         </div>
  
 
