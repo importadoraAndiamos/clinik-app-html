@@ -88,7 +88,7 @@
                 </div>
             </header>
 
-            <main class="container">
+            <main>
                 <nav aria-label="breadcrumb" class="agenda_path">
                     <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -96,74 +96,68 @@
                     </ol>
                 </nav>
 
-                <form >
-                    <div class="calendar_form mt-3">
+                <form>
+                    <div class="main_target_form">
                         <div class="form_row">
-                            <h1>Configuration date</h1>
-
-                            <div class="col-12 data_row p-0">
-                                <div class="form-group col-md-6 p-0 pr-2">
-                                    <label for="inputEmail4">Duration date</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                            <h2 class="col-12 title_section_form">Configuration date</h2>
+                            
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Duration date</label>
+                                    <input type="email" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 pl-2">
-                                    <label for="inputPassword4">After date</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">After date</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group btn_save_formCalendar">
-                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data">
-                                <i class="far fa-question-circle"></i>
-                            </button>
-
-                            <button type="submit" class="btn">Save <i class="fas fa-save"></i> </button>
+                        <div class="button_container_form">
+                            <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
+                            <button type="submit" class="button_save_form">Save<i class="fas fa-save"></i> </button>
                         </div>
                     </div>
 
-                    <div class="calendar_form mt-3">
+                    <div class="main_target_form">
                         <div class="form_row">
-                            <h1>Add schedule</h1>
-
-                            <div class="col-12 date_formcalendar p-0">
-                                <ul>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Monday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Thuesday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Wendsday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Thursday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Friday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Saturday </li>
-                                    <li> <input class="" type="radio" value="" id="" name=""> Sunday </li>
+                            <h2 class="col-12 title_section_form">Add schedule</h2>
+                            
+                            <div class="col-12 data_group_form mb-2">
+                                <ul class="row m-0">
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Monday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thuesday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Wendsday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thursday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Friday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Saturday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Sunday </li>
                                 </ul>
                             </div>
                 
-                            <div class="col-12 data_row p-0">
-                                <div class="form-group col-md-6 p-0 pr-2">
-                                    <label for="inputEmail4">Start time</label>
-                                    <input type="email" class="form-control" id="inputEmail4">
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Start time</label>
+                                    <input type="email" class="input_dataGroup_form" id="">
                                 </div>
                                 
-                                <div class="form-group col-md-6 p-0 pl-2">
-                                    <label for="inputPassword4">End time</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">End time</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group btn_save_formCalendar">
-                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data">
-                                <i class="far fa-question-circle"></i>
-                            </button>
-                            
-                            <button> Add <i class="fas fa-plus"></i> </button>
+                        <div class="button_container_form">
+                            <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
+                            <button type="submit" class="button_save_form">Add<i class="fas fa-plus"></i> </button>
                         </div>
 
                         <div class="form_row mt-4">
-                            <h1>Schedule</h1>
+                            <h2 class="col-12 title_section_form">Schedule</h2>
                 
-                            <div class="col-12 data_row p-0 mt-2">
+                            <div class="col-12 data_row_form">
                                 <table class="table table-striped table-bordered p-0">
                                     <thead>
                                         <tr>
