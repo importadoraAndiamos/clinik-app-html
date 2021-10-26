@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <!-- css del plugin full calendar -->
+        <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
+
+        <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/plugin/DataTables-1.11.3/css/jquery.dataTables.min.css"/>
+        
+        <title> Admin </title>
+    </head>
+    <body>
+        <input type="checkbox" id="nav_toggle">
+
+        <!-- Sidebar lateral-->
+        <div class="sidebar">
+            <!-- Sección del logo -->
+            <div class="sidebar_logo">
+                <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
+            </div>
+
+            <!--Secciones del menu-->
+            <div class="sidebar_menu">
+                <div class="sidebar_user">
+                    <img src="assets/imagenes/Dra-user.jpg" alt="">
+                    <span>Dra. Juliana Rodriguez</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <a id="home" href="">
+                            <i class="fas fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="calendario" href="" class="active">
+                            <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="historia_clinica" href="">
+                            <i class="fas fa-file-signature"></i> <span>Historia Clínica</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <!-- Fecha -->
+            <div class="header_info">
+                <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
+            
+                <span>servicioalcliente@zaabrasalud.co</span>
+            </div> 
+            <!-- Sidebar header -->
+            <header>
+                <!-- Botón de despliegue -->
+                <h2>
+                    <label for="nav_toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                </h2>
+                <!-- Usuario  -->
+                <div class="user-wrapper">
+                    <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                    <div>
+                        <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <nav aria-label="breadcrumb" class="agenda_path">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Patient-list</a></li>
+                    </ol>
+                </nav>
+
+                <div class="agenda_row my-3">
+                    <h1 class="title_list">Patients &nbsp;<i class="fas fa-users"></i></h1>
+                    <button type="submit" class="button_save_form">Add user&nbsp;<i class="fas fa-user-plus"></i> </button>
+                </div>
+
+                <table id="example" class="display nowrap table_agenda my-3" style="width:100%">
+                    <thead class="">
+                        <tr>
+                            <th>Name</th>
+                            <th>Id</th>
+                            <th>Age</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Jaime Francisco Aguayo González</td>
+                            <td>1034254164</td>
+                            <td>28 years old</td>
+                            <td> <span class="status_unactive">Unactive</span> </td>
+                            <td>
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="Edit user" class="action_table"><i class="fas fa-user-edit"> &nbsp;</i>Edit</a> &nbsp;
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="view user" class="action_table"><i class="fas fa-folder-open"> &nbsp;</i>Open file</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Ruth Silvana Cortés Lagunes</td>
+                            <td>24687125</td>
+                            <td>48 years old</td>
+                            <td> <span class="status_active">Active</span> </td>
+                            <td>
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="Edit user" class="action_table"><i class="fas fa-user-edit"> &nbsp;</i>Edit</a> &nbsp;
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="view user" class="action_table"><i class="fas fa-folder-open"> &nbsp;</i>Open file</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Luis Felipe Delgado Barrón</td>
+                            <td>35898457</td>
+                            <td>50 years old</td>
+                            <td> <span class="status_active">Active</span> </td>
+                            <td>
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="Edit user" class="action_table"><i class="fas fa-user-edit"> &nbsp;</i>Edit</a> &nbsp;
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="view user" class="action_table"><i class="fas fa-folder-open"> &nbsp;</i>Open file</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Montserrat Carolina García Arreguín</td>
+                            <td>1034598741</td>
+                            <td>30 years old</td>
+                            <td> <span class="status_active">Active</span> </td>
+                            <td>
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="Edit user" class="action_table"><i class="fas fa-user-edit"> &nbsp;</i>Edit</a> &nbsp;
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="view user" class="action_table"><i class="fas fa-folder-open"> &nbsp;</i>Open file</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Miguel Alejandro Guerrero Padrés</td>
+                            <td>1032157894</td>
+                            <td>34 years old</td>
+                            <td> <span class="status_unactive">Unactive</span> </td>
+                            <td>
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="Edit user" class="action_table"><i class="fas fa-user-edit"> &nbsp;</i>Edit</a> &nbsp;
+                                <a href="#" data-toggle="tooltip" data-container=".tooltip-danger" title="view user" class="action_table"><i class="fas fa-folder-open"> &nbsp;</i>Open file</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Id</th>
+                            <th>Age</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot> -->
+                </table>
+            </main>
+        </div>
+ 
+
+        <!-- Scrip para fullcalendar -->
+        <script src='assets/plugin/full_calendar/lib/main.js'></script>
+        <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
+        <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+        
+        <script src='assets/js/menu-lateral.js'></script> 
+
+        <script type="text/javascript" src="assets/plugin/DataTables-1.11.3/datatables.min.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('#example').DataTable( {
+                responsive: true
+                } );
+            } );
+        </script>
+    </body>
+</html>
