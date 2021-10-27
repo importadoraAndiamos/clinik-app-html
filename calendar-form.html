@@ -1,205 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
-    <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <!-- css del plugin full calendar -->
+        <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
 
-    <!-- css del plugin full calendar -->
-    <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
+        <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/app.css">
 
-    <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        <title> Admin </title>
+    </head>
+    <body>
+        <input type="checkbox" id="nav_toggle">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/app.css">
-
-    <title> Admin </title>
-</head>
-<body>
-<input type="checkbox" id="nav_toggle">
-
-<!-- Sidebar lateral-->
-<div class="sidebar">
-    <!-- Sección del logo -->
-    <div class="sidebar_logo">
-        <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
-    </div>
-
-    <!--Secciones del menu-->
-    <div class="sidebar_menu">
-        <div class="sidebar_user">
-            <img src="assets/imagenes/Dra-user.jpg" alt="">
-            <span>Dra. Juliana Rodriguez</span>
-        </div>
-
-        <ul>
-            <li>
-                <a id="home" href="">
-                    <i class="fas fa-home"></i> <span>Home</span>
-                </a>
-            </li>
-
-            <li>
-                <a id="calendario" href="" class="active">
-                    <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
-                </a>
-            </li>
-            <li>
-                <a id="historia_clinica" href="">
-                    <i class="fas fa-file-signature"></i> <span>Historia Clínica</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="main_content">
-    <!-- Fecha -->
-    <div class="header_info">
-        <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span>
-
-        <span>servicioalcliente@zaabrasalud.co</span>
-    </div>
-    <!-- Sidebar header -->
-    <header>
-        <!-- Botón de despliegue -->
-        <h2>
-            <label for="nav_toggle">
-                <span class="fas fa-bars"></span>
-            </label>
-        </h2>
-        <!-- Usuario  -->
-        <div class="user-wrapper">
-            <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
-            <div>
-                <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+        <!-- Sidebar lateral-->
+        <div class="sidebar">
+            <!-- Sección del logo -->
+            <div class="sidebar_logo">
+                <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
             </div>
-        </div>
-    </header>
 
-    <main>
-        <nav aria-label="breadcrumb" class="agenda_path">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Calendar-form</a></li>
-            </ol>
-        </nav>
-
-        <form>
-            <div class="main_target_form">
-                <div class="form_row">
-                    <h2 class="col-12 title_section_form">Configuration date</h2>
-
-                    <div class="col-12 data_row_form">
-                        <div class="col-md-6 data_group_form">
-                            <label for="">Duration date</label>
-                            <input type="email" class="input_dataGroup_form" id="">
-                        </div>
-
-                        <div class="col-md-6 data_group_form">
-                            <label for="">After date</label>
-                            <input type="password" class="input_dataGroup_form" id="">
-                        </div>
-                    </div>
+            <!--Secciones del menu-->
+            <div class="sidebar_menu">
+                <div class="sidebar_user">
+                    <img src="assets/imagenes/Dra-user.jpg" alt="">
+                    <span>Dra. Juliana Rodriguez</span>
                 </div>
 
-                <div class="button_container_form">
-                    <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
-                    <button type="submit" class="button_save_form">Save<i class="fas fa-save"></i> </button>
-                </div>
-            </div>
-        </form>
+                <ul>
+                    <li>
+                        <a id="home" href="">
+                            <i class="fas fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
 
-
-        <div class="main_target_form">
-            <form>
-                <div class="form_row">
-                    <h2 class="col-12 title_section_form">Add schedule</h2>
-
-                    <div class="col-12 data_group_form mb-2">
-                        <ul class="row m-0">
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Monday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thuesday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Wendsday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thursday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Friday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Saturday </li>
-                            <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Sunday </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-12 data_row_form">
-                        <div class="col-md-6 data_group_form">
-                            <label for="">Start time</label>
-                            <input type="email" class="input_dataGroup_form" id="">
-                        </div>
-
-                        <div class="col-md-6 data_group_form">
-                            <label for="">End time</label>
-                            <input type="password" class="input_dataGroup_form" id="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="button_container_form">
-                    <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
-                    <button type="submit" class="button_save_form">Add<i class="fas fa-plus"></i> </button>
-                </div>
-            </form>
-            <div class="form_row mt-4">
-                <h2 class="col-12 title_section_form">Schedule</h2>
-
-                <div class="col-12 data_row_form">
-                    <table class="table table-striped table-bordered p-0">
-                        <thead>
-                        <tr>
-                            <th scope="col">Days</th>
-                            <th scope="col">Hours</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        <tr>
-
-                            <td>Lunes - Miércoles</td>
-                            <td>10:00am - 11:00am</td>
-                            <td>Eliminar</td>
-                        </tr>
-                        <tr>
-
-                            <td>Martes - Jueves</td>
-                            <td>01:00pm - 03:00pm</td>
-                            <td>Anexar</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <li>
+                        <a id="calendario" href="" class="active">
+                            <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="historia_clinica" href="">
+                            <i class="fas fa-file-signature"></i> <span>Historia Clínica</span> 
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
+        <div class="main_content">
+            <!-- Fecha -->
+            <div class="header_info">
+                <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
+            
+                <span>servicioalcliente@zaabrasalud.co</span>
+            </div> 
+            <!-- Sidebar header -->
+            <header>
+                <!-- Botón de despliegue -->
+                <h2>
+                    <label for="nav_toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                </h2>
+                <!-- Usuario  -->
+                <div class="user-wrapper">
+                    <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                    <div>
+                        <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                    </div>
+                </div>
+            </header>
 
-    </main>
+            <main>
+                <nav aria-label="breadcrumb" class="agenda_path">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Calendar-form</a></li>
+                    </ol>
+                </nav>
 
-</div>
+                <form>
+                    <div class="main_target_form">
+                        <div class="form_row">
+                            <h2 class="col-12 title_section_form">Configuration date</h2>
+                            
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Duration date</label>
+                                    <input type="email" class="input_dataGroup_form" id="">
+                                </div>
+                                
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">After date</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
+                                </div>
+                            </div>
+                        </div>
 
-<!-- Scrip para fullcalendar -->
-<script src='assets/plugin/full_calendar/lib/main.js'></script>
-<script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
-<script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
-<script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+                        <div class="button_container_form">
+                            <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
+                            <button type="submit" class="button_save_form">Save &nbsp;<i class="fas fa-save"></i> </button>
+                        </div>
+                    </div>
 
-<script src='assets/js/menu-lateral.js'></script>
-</body>
+                    <div class="main_target_form">
+                        <div class="form_row">
+                            <h2 class="col-12 title_section_form">Add schedule</h2>
+                            
+                            <div class="col-12 data_group_form mb-2">
+                                <ul class="row m-0">
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Monday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thuesday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Wendsday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Thursday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Friday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Saturday </li>
+                                    <li class="col-5 col-md-3 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name=""> Sunday </li>
+                                </ul>
+                            </div>
+                
+                            <div class="col-12 data_row_form">
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">Start time</label>
+                                    <input type="email" class="input_dataGroup_form" id="">
+                                </div>
+                                
+                                <div class="col-md-6 data_group_form">
+                                    <label for="">End time</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button_container_form">
+                            <button type="submit" class="button_help_form" data-bs-toggle="tooltip" data-bs-placement="right" title="help configuration data"><i class="far fa-question-circle"></i></button>
+                            <button type="submit" class="button_save_form">Add &nbsp;<i class="fas fa-plus"></i> </button>
+                        </div>
+
+                        <div class="form_row mt-4">
+                            <h2 class="col-12 title_section_form">Schedule</h2>
+                
+                            <div class="col-12 data_row_form">
+                                <table class="table table-striped table-bordered p-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Days</th>
+                                            <th scope="col">Hours</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+ 
+                                            <td>Lunes - Miércoles</td>
+                                            <td>10:00am - 11:00am</td>
+                                            <td>Eliminar</td>
+                                        </tr>
+                                        <tr>
+                              
+                                            <td>Martes - Jueves</td>
+                                            <td>01:00pm - 03:00pm</td>
+                                            <td>Anexar</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+
+        </div>
+
+        <!-- Scrip para fullcalendar -->
+        <script src='assets/plugin/full_calendar/lib/main.js'></script>
+        <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
+        <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+        
+        <script src='assets/js/menu-lateral.js'></script> 
+    </body>
 </html>

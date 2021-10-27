@@ -111,191 +111,309 @@
             </main>
 
 
-
-
-            <!--  Modal gestionar cita -->
+            <!--  ---***** MODAL GESTIONAR CITA *****---  -->
             <div class="modal fade" id="gestionar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <!-- header -->
+                        <!-- Header Modal-->
                         <div class="modal-header head_modal">
-                            <h1 id="exampleModalLabel">Agendar cita</h1>
+                            <h1 id="exampleModalLabel">Scheduled appointment</h1>
 
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
 
-                        <!-- footer -->
-                        <div class="footer_modal p-5">    
-                           <button type="submit" class="" id=""> Ver cita </button>
-                         
-                            <button type="submit" class="" id="select_agendar"> Agendar cita </button>
+                        <!-- Body Modal-->
+                        <div class="modal-body body_modal p-4"></div>
+
+                        <!-- Footer Modal -->
+                        <div class="footer_modal">  
+                            <!-- Button's save and cancel   -->
+                            <div class="button_container_form">
+                                <button type="submit" class="button_save_form">See appointment </button>
+                                <button type="submit" class="button_save_form" id="select_agendar">Shedule appointment </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <!--  Modal agendar cita -->
+            <!--  ---***** MODAL SCHEDULED APPOINTMENT *****---  -->
             <div class="modal fade" id="agendar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                        <!-- header -->
+                        <!-- Header Modal -->
                         <div class="modal-header head_modal">
-                            <h1 id="exampleModalLabel">Agendar cita</h1>
+                            <h1 id="exampleModalLabel">Scheduled appointment</h1>
 
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <!-- Body -->
+
+                        <!-- Body Modal -->
                         <div class="modal-body body_modal">
                             <form method="POST" action="" id="">
-                                <label for="cita_disponible"> Cita disponible </label>
-                                <div class="content_items_cita">
-                                    <div class="inputText_cita">
-                                        <input class="" type="radio" value="" id="" name="">
-                                        <ul class="items_cita">
-                                            <li>Dr. Wilmar Andres Salamanca Rengifo</li>
-                                            <li>8:00am - 10:00am</li> 
-                                        </ul>
+                                <div class="form_row">
+                                    <!-- Section personal information  -->
+                                    <div class="data_row_form">
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Name</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Last name</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Id card</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">E-mail</label>
+                                            <input type="email" class="input_dataGroup_form" id="">
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Type consultation</label>
+                                            <select name="" id="" class="input_dataGroup_form">
+                                                <option value="" selected> Select consultation </option>
+                                                <option value="1">Face-to-face</option>
+                                                <option value="2">Virtual</option>
+                                                <option value="3">Medcal control</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Consent</label>
+                                            <select name="" id="" class="input_dataGroup_form">
+                                                <option value="" selected> Select type consent </option>
+                                                <option value="1">Template 1</option>
+                                                <option value="2">Template 2</option>
+                                                <option value="3">Template 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <div class="custom-control custom-checkbox d-flex justify-content-between p-0">
+                                                <label for="">Agreement</label>
+
+                                                <input type="checkbox" class="custom-control-input" id="activate_select">
+                                                <label class="custom-control-label" for="activate_select">Activate select</label>
+                                            </div>
+
+                                            <select name="" id="select_agreement" class="input_disabled_dataGroup_form" disabled="true">
+                                                <option value="" selected> Select </option>
+                                                <option value="1">Agreement 1</option>
+                                                <option value="2">Agreement 2</option>
+                                                <option value="3">Agreement 3</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Consulting room</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Value to be paied</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
                                     </div>
 
-                                    <div class="inputText_cita">
-                                        <input class="" type="radio" value="" id="" name="">
-                                        <ul class="items_cita">
-                                            <li>Dra. Angela Fernandez</li>
-                                            <li>01:00pm - 02:00pm</li> 
-                                        </ul>
+                                    <!-- Section appoiment available -->
+                                    <div class="col-lg-6 data_row_form px-md-2">
+                                        <label for="">Appointment available</label>
+                                        <div class="col-12 content_items_cita">
+                                            <div class="inputText_cita" id="selected_appointment">
+                                                <input class="" type="radio" value="" id="check_appointment" name="">
+                                                <ul class="items_cita" >
+                                                    <li>Dr. Wilmar Andres Salamanca Rengifo</li>
+                                                    <li>8:00am - 10:00am</li> 
+                                                </ul>
+                                            </div>
+        
+                                            <div class="inputText_cita">
+                                                <input class="" type="radio" value="" id="" name="">
+                                                <ul class="items_cita">
+                                                    <li>Dra. Angela Fernandez</li>
+                                                    <li>01:00pm - 02:00pm</li> 
+                                                </ul>
+                                            </div>
+        
+                                            <div class="inputText_cita">
+                                                <input class="" type="radio" value="" id="" name="">
+                                                <ul class="items_cita">
+                                                    <li>Dra. Katalina Jimenez</li>
+                                                    <li>07:00am - 09:00am</li> 
+                                                </ul>
+                                            </div>
+        
+                                            <div class="inputText_cita">
+                                                <input class="" type="radio" value="" id="" name="">
+                                                <ul class="items_cita">
+                                                    <li>Dr. David Galeano</li>
+                                                    <li>03:00pm - 04:00pm</li> 
+                                                </ul>
+                                            </div>
+
+                                            <div class="inputText_cita">
+                                                <input class="" type="radio" value="" id="" name="">
+                                                <ul class="items_cita">
+                                                    <li>Dra. Carolina Huertas</li>
+                                                    <li>04:30pm - 06:00pm</li> 
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="inputText_cita">
-                                        <input class="" type="radio" value="" id="" name="">
-                                        <ul class="items_cita">
-                                            <li>Dra. Katalina Jimenez</li>
-                                            <li>07:00am - 09:00am</li> 
-                                        </ul>
+                                    <!-- Section description -->
+                                    <div class="col-lg-6 data_row_form mb-0">
+                                        <div class="col-12 data_group_form mb-0">
+                                            <label for="">Description</label>
+                                            <textarea name="descripcion_cita" id="descripcion_cita" cols="30" rows="10" class="textArea_form"></textarea>
+                                        </div>
                                     </div>
-
-                                    <div class="inputText_cita">
-                                        <input class="" type="radio" value="" id="" name="">
-                                        <ul class="items_cita">
-                                            <li>Dr. David Galeano</li>
-                                            <li>03:00pm - 04:00pm</li> 
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="ui-widget">
-                                    <input id="tags" class="form-control" placeholder="Ingrese número de documento">
-                                    <i class="far fa-check-circle"></i>
-                                    <!-- <i class="far fa-times-circle"></i> -->
-                                </div>
-
-                                <div class="content_textArea_citas">
-                                    <label for="cita_disponible" class="">Descripción</label>
-                                    <textarea class="" name="descripcion_cita" id="descripcion_cita" cols="30" rows="10"></textarea>
-                                </div>
-
-                                <div class="content_consultorio_citas">
-                                    <label for="cita_disponible" class="">Consultorio</label>
-                                    <input class="form-control" type="text" value="" id="consultorio" name="consultorio">
                                 </div>
                             </form>
                         </div>
 
-                        <div class="footer_modal">    
-                            <button type="submit" class="" id="">Agendar</button>
-
-                            <button type="submit" class="select_cancel" id="">Cancelar</button>
+                        <!-- Footer Modal -->
+                        <div class="footer_modal">
+                            <!-- Button's cancel and save -->
+                            <div class="button_container_form">
+                                <button type="submit" class="button_cancel_form select_cancel">Cancel &nbsp;<i class="fas fa-times-circle"></i> </button>
+                                <button type="submit" class="button_save_form">Save &nbsp;<i class="fas fa-save"></i> </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--  Modal ver cita -->
-            <div class="modal fade modalC" id="ver_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <!--  ---***** MODAL SEE APPOINTMENT *****---  -->
+            <div class="modal fade" id="ver_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <!-- header -->
+                        <!-- Header Modal -->
                         <div class="modal-header head_modal">
-                            <h1 class="" id="exampleModalLabel">Cita <label id=""></label></h1>
+                            <h1 class="" id="exampleModalLabel">Appointment<label id=""></label></h1>
                             
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <!-- Body -->
+
+                        <!-- Body Modal -->
                         <div class="modal-body body_modal">
-                            <div class="items_verCita">
-                                <h5 class="" id="">Laura León</h5>
+                            <div class="form_row">
+                                <div class="data_row_form">
+                                    <!-- User and appointment assigned -->
+                                    <div class="col-12 data_group_form items_verCita">
+                                        <h5 class="" id="">Laura León</h5>
 
-                                <ul class="">
-                                    <li class="" id="" >Jueves, 12 de mayo</li>
-                                    <li class="" id="">10:47 - 11:47 a.m</li>
-                                </ul>
+                                        <ul class="">
+                                            <li class="" id="" >Thursday, 12 may</li>
+                                            <li class="" id="">10:47 - 11:47 a.m</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Type appointment -->
+                                    <div class="col-12 data_group_form items_verCita">
+                                        <h5 class="" id="">Type appointment</h5>
+
+                                        <ul class="">
+                                            <li class="" id="" >Thursday, 12 de may</li>
+                                            <li class="" id="">10:47 - 11:47 a.m</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Consulting room -->
+                                    <div class="col-12 data_group_form">
+                                        <label for="">Consulting room</label>
+                                        <input type="text" class="input_dataGroup_form" id="">
+                                    </div>
                                 
-                                <h5 class="" id="">Tipo de cita</h5>
-                                <ul class="">
-                                    <li class="" id="">Presencial</li>
-                                </ul>
-
-                                <div class="content_textArea_citas">
-                                    <label for="cita_disponible" class="">Descripción</label>
-                                    <textarea class="" name="descripcion_cita" id="descripcion_cita" cols="30" rows="10"></textarea>
-                                </div>
-
-                                <div class="content_consultorio_citas">
-                                    <label for="cita_disponible" class="">Consultorio</label>
-                                    <input class="form-control" type="text" value="" id="consultorio" name="consultorio">
+                                    <!-- Description -->
+                                    <div class="col-12 data_group_form mb-0">
+                                        <label for="">Description</label>
+                                        <textarea name="descripcion_cita" id="descripcion_cita" cols="30" rows="10" class="textArea_form"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Sección botón Pagar -->
+                        <!-- Footer Modal -->
                         <div class="footer_modal">
-                            <button type="submit" class="" id="select_edit">Editar cita</button>
-
-                            <button type="submit" class="select_cancel" id="">Cancelar cita </button>
+                            <!-- Button's, cancel and save -->
+                            <div class="button_container_form">
+                                <button type="submit" class="button_cancel_form select_cancel">Cancel appointment &nbsp;<i class="fas fa-times-circle"></i> </button>
+                                <button type="submit" id="select_edit" class="button_save_form">Edit appointment &nbsp;<i class="fas fa-save"></i> </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <!--  Modal eliminar cita -->
+            <!--  ---***** MODAL CANCELED APPOINTMENT *****---  -->
             <div class="modal fade modalC" id="eliminar_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <!-- header -->
+                        <!-- Header Modal-->
                         <div class="modal-header head_modal">
-                            <h1 class="" id="exampleModalLabel">Cita <label id=""></label></h1>
+                            <h1 class="" id="exampleModalLabel">Appointment<label id=""></label></h1>
                             
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <!-- Body -->
-                        <div class="modal-body p-5">
+                        <!-- Body Modal-->
+                        <div class="modal-body p-4">
                             <div class="items_deleted_quote">
-                                <h3 class="" id=""> Cita cancelada </h3>
+                                <h3 class="" id="">Canceled appointment</h3>
                                 <i class="fas fa-trash-alt"></i>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
  
 
-        <!-- Scrip para fullcalendar -->
+        <!-- Script para fullcalendar -->
         <script src='assets/plugin/full_calendar/lib/main.js'></script>
         <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
         <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
         <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
         
         <script src='assets/js/menu-lateral.js'></script> 
+
+        <script>
+            // Función para activar y desactivar el select de la opción agreement de la información personal, modal Scheduled appointment
+            $('#activate_select').on('change', function() {
+                if ( $(this).is(':checked') ) {
+                    $("#select_agreement").prop("disabled", false );
+                    $("#select_agreement").removeClass("input_disabled_dataGroup_form");
+                    $("#select_agreement").addClass("input_dataGroup_form");
+                } else {
+                    $("#select_agreement").prop("disabled", true );
+                    $("#select_agreement").addClass("input_disabled_dataGroup_form");
+                    $("#select_agreement").removeClass("input_dataGroup_form");
+                }
+            });
+
+            // Función para pintar la cita seleccionada de la opción appointment available
+            $('#check_appointment').on('change', function(){
+                if ( $(this).is(':checked') ) {
+                    $("#selected_appointment").css("background", "#d6e0eb");
+                }
+            } );
+        </script>
     </body>
 </html>
