@@ -18,7 +18,19 @@ table.table_agenda {
     background-color: var(--primary-color);
     color: var(--text-light);
 }
-
+// Imagen del paciente
+// Imagen del usuario
+.img_user_list {
+    background-image: url('../imagenes/user-avatar.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    border: none;
+    border-radius: 35px;
+    width: 25px;
+    height: 25px;
+    margin-right: .3em;
+}
 // Estado del usuario (Activo o Inactivo)
 .status_active {
     color: var(--fourth-color);

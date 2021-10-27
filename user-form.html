@@ -24,6 +24,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/app.css">
 
+        <!-- css plugin multiselect -->
+        <link href="assets/plugin/select2-4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
         <title> Admin </title>
     </head>
     <body>
@@ -92,15 +95,15 @@
                 <nav aria-label="breadcrumb" class="agenda_path">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Patient-form</a></li>
+                        <li class="breadcrumb-item"><a href="#">User-form</a></li>
                     </ol>
                 </nav>
 
                 <form>
                     <div class="main_target_form">
                         <div class="form_row">
-                            <!-- Basic data patient -->
-                            <h2 class="col-12 title_section_form">Personal information</h2>
+                            <!-- User information -->
+                            <h2 class="col-12 title_section_form">User information</h2>
 
                             <div class="col-8 col-md-3 col-xl-2 imgUser_container_form">
                                 <img src="" alt="" class="img_user_form">
@@ -126,48 +129,9 @@
                                 
                                 <div class="col-md-6 data_group_form">
                                     <label for="">Id card</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
+                                    <input type="number" class="input_dataGroup_form" id="">
                                 </div>
                             </div>
-
-                            <div class="col-12 data_row_form">
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Date of birth</label>
-                                    <input type="date" class="input_dataGroup_form" id="">
-                                </div>
-                                
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Place of birth</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Age</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-                                
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Gender</label>
-                                    <select name="" id="" class="input_dataGroup_form">
-                                        <option value="" selected> Select gender </option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Feminine</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Occupation</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-
-                                <div class="col-md-6 col-xl-4 data_group_form">
-                                    <label for="">Marital status</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-                            </div>
-
-                            <!-- Contacts and address Patient -->
-                            <h2 class="col-12 title_section_form">Contacts and address</h2>
 
                             <div class="col-12 data_row_form">
                                 <div class="col-md-6 col-lg-4 data_group_form">
@@ -186,53 +150,36 @@
                                 </div>
                                 
                                 <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">Resident address</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
+                                    <label for="">Password</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
                                 </div>
 
                                 <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">Neighbordhood</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-
-                                <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">Town</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
+                                    <label for="">Confirm password</label>
+                                    <input type="password" class="input_dataGroup_form" id="">
                                 </div>
                             </div>
 
-                            <!-- Medical security Patient -->
-                            <h2 class="col-12 title_section_form">Medical security</h2>
-
-                            <div class="col-12 data_row_form">
-                                <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">Promoting entity</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-                                
-                                <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">Contributory regime</label>
-                                    <input type="text" class="input_dataGroup_form" id="">
-                                </div>
-
-                                <div class="col-md-6 col-lg-4 data_group_form">
-                                    <label for="">State</label>
-                                    <ul class="row m-0">
-                                        <li class="col-4 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Active</li>
-                                        <li class="col-4 li_input_form"> <input class="inputRadio_form" type="radio" value="" id="" name="">Unactive</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Additional information Patient -->
+                            <!-- Additional information user -->
                             <h2 class="col-12 title_section_form">Additional Information</h2>
 
-                            <div class="col-12 data_row_form">
+                            <div class="col-12 data_row_form">   
+                                <!-- <div class="col-md-8 data_group_form">    --------  estilos css comentariados en la sección input select personalizado del archivo _form.scss  --------
+                                    <label for="exampleFormControlFile1">Choose clinic history</label>
+                                    <input type="file" class="input_choose_form file-select" id="exampleFormControlFile1">
+                                </div> -->
+
                                 <div class="col-md-8 data_group_form">
-                                    <label for="">Observation</label>
-                                    <textarea name="" id="" cols="30" rows="10" class="textArea_form"></textarea>
+                                    <label class="col-12 p-0" for="" >Choose clinic history</label>
+                                    <select class="select_dataGroup_form" name="states[]" multiple="multiple">
+                                        <option value="1">Historia clínica N° 161181</option>
+                                        <option value="2">Historia clínica N° 354875</option>
+                                        <option value="3">Historia clínica N° 894627</option>
+                                        <option value="3">Historia clínica N° 678945</option>
+                                        <option value="3">Historia clínica N° 247854</option>
+                                    </select>
                                 </div>
-                                
+
                                 <div class="col-md-4 data_group_form">
                                     <label for="">Patient's status</label>
                                     <ul class="row m-0">
@@ -258,7 +205,20 @@
         <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
         <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
         <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
-        
         <script src='assets/js/menu-lateral.js'></script> 
+        <!-- js del plugin multi select -->
+        <script src="assets/plugin/select2-4.1.0-rc.0/dist/js/select2.full.min.js"></script>
+
+        <!-- Inicialización del multi select -->
+        <script>
+            $(document).ready(function() {
+                $ ( ".select_dataGroup_form" ). select2 ({ 
+                    placeholder: {
+                        text: 'Select clinic history'
+                    }
+                }); 
+            });
+        </script>
+        
     </body>
 </html>
