@@ -207,7 +207,7 @@
                                                 <label class="custom-control-label" for="activate_select">Activate select</label>
                                             </div>
 
-                                            <select name="" id="select_agreement" class="input_disabled_dataGroup_form" disabled="true">
+                                            <select name="" id="" class="input_disabled_dataGroup_form select_agreement" disabled="true">
                                                 <option value="" selected> Select </option>
                                                 <option value="1">Agreement 1</option>
                                                 <option value="2">Agreement 2</option>
@@ -298,7 +298,7 @@
 
             <!--  ---***** MODAL SEE APPOINTMENT *****---  -->
             <div class="modal fade" id="ver_cita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <!-- Header Modal -->
                         <div class="modal-header head_modal">
@@ -313,16 +313,6 @@
                         <div class="modal-body body_modal">
                             <div class="form_row">
                                 <div class="data_row_form">
-                                    <!-- User and appointment assigned -->
-                                    <div class="col-12 data_group_form items_verCita">
-                                        <h5 class="" id="">Laura León</h5>
-
-                                        <ul class="">
-                                            <li class="" id="" >Thursday, 12 may</li>
-                                            <li class="" id="">10:47 - 11:47 a.m</li>
-                                        </ul>
-                                    </div>
-
                                     <!-- Type appointment -->
                                     <div class="col-12 data_group_form items_verCita">
                                         <h5 class="" id="">Type appointment</h5>
@@ -333,10 +323,73 @@
                                         </ul>
                                     </div>
 
-                                    <!-- Consulting room -->
-                                    <div class="col-12 data_group_form">
-                                        <label for="">Consulting room</label>
-                                        <input type="text" class="input_dataGroup_form" id="">
+                                    <!-- Section personal information  -->
+                                    <div class="data_row_form">
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Name</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Last name</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Id card</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">E-mail</label>
+                                            <input type="email" class="input_dataGroup_form" id="">
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Type consultation</label>
+                                            <select name="" id="" class="input_dataGroup_form">
+                                                <option value="" selected> Select consultation </option>
+                                                <option value="1">Face-to-face</option>
+                                                <option value="2">Virtual</option>
+                                                <option value="3">Medcal control</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Consent</label>
+                                            <select name="" id="" class="input_dataGroup_form">
+                                                <option value="" selected> Select type consent </option>
+                                                <option value="1">Template 1</option>
+                                                <option value="2">Template 2</option>
+                                                <option value="3">Template 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <div class="custom-control custom-checkbox d-flex justify-content-between p-0">
+                                                <label for="">Agreement</label>
+
+                                                <input type="checkbox" class="custom-control-input" id="activate_select2">
+                                                <label class="custom-control-label" for="activate_select2">Activate select</label>
+                                            </div>
+
+                                            <select name="" id="" class="input_disabled_dataGroup_form select_agreement" disabled="true">
+                                                <option value="" selected> Select </option>
+                                                <option value="1">Agreement 1</option>
+                                                <option value="2">Agreement 2</option>
+                                                <option value="3">Agreement 3</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Consulting room</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
+
+                                        <div class="col-lg-4 data_group_form">
+                                            <label for="">Value to be paied</label>
+                                            <input type="text" class="input_dataGroup_form" id="">
+                                        </div>
                                     </div>
                                 
                                     <!-- Description -->
@@ -352,8 +405,8 @@
                         <div class="footer_modal">
                             <!-- Button's, cancel and save -->
                             <div class="button_container_form">
-                                <button type="submit" class="button_cancel_form select_cancel">Cancel appointment &nbsp;<i class="fas fa-times-circle"></i> </button>
-                                <button type="submit" id="select_edit" class="button_save_form">Edit appointment &nbsp;<i class="fas fa-save"></i> </button>
+                                <button type="submit" class="button_cancel_form select_cancel">Cancel &nbsp;<i class="fas fa-times-circle"></i> </button>
+                                <button type="submit" id="select_edit" class="button_save_form">Save &nbsp;<i class="fas fa-save"></i> </button>
                             </div>
                         </div>
                     </div>
@@ -398,13 +451,25 @@
             // Función para activar y desactivar el select de la opción agreement de la información personal, modal Scheduled appointment
             $('#activate_select').on('change', function() {
                 if ( $(this).is(':checked') ) {
-                    $("#select_agreement").prop("disabled", false );
-                    $("#select_agreement").removeClass("input_disabled_dataGroup_form");
-                    $("#select_agreement").addClass("input_dataGroup_form");
+                    $(".select_agreement").prop("disabled", false );
+                    $(".select_agreement").removeClass("input_disabled_dataGroup_form");
+                    $(".select_agreement").addClass("input_dataGroup_form");
                 } else {
-                    $("#select_agreement").prop("disabled", true );
-                    $("#select_agreement").addClass("input_disabled_dataGroup_form");
-                    $("#select_agreement").removeClass("input_dataGroup_form");
+                    $(".select_agreement").prop("disabled", true );
+                    $(".select_agreement").addClass("input_disabled_dataGroup_form");
+                    $(".select_agreement").removeClass("input_dataGroup_form");
+                }
+            });
+
+            $('#activate_select2').on('change', function() {
+                if ( $(this).is(':checked') ) {
+                    $(".select_agreement").prop("disabled", false );
+                    $(".select_agreement").removeClass("input_disabled_dataGroup_form");
+                    $(".select_agreement").addClass("input_dataGroup_form");
+                } else {
+                    $(".select_agreement").prop("disabled", true );
+                    $(".select_agreement").addClass("input_disabled_dataGroup_form");
+                    $(".select_agreement").removeClass("input_dataGroup_form");
                 }
             });
 
