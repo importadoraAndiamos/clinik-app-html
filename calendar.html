@@ -203,8 +203,8 @@
                                             <div class="custom-control custom-checkbox d-flex justify-content-between p-0">
                                                 <label for="">Agreement</label>
 
-                                                <input type="checkbox" class="custom-control-input" id="activate_select">
-                                                <label class="custom-control-label" for="activate_select">Activate select</label>
+                                                <input type="checkbox" class="custom-control-input agreement_select" id="activ_select">
+                                                <label class="custom-control-label" for="activ_select">Activate select</label>
                                             </div>
 
                                             <select name="" id="" class="input_disabled_dataGroup_form select_agreement" disabled="true">
@@ -369,8 +369,8 @@
                                             <div class="custom-control custom-checkbox d-flex justify-content-between p-0">
                                                 <label for="">Agreement</label>
 
-                                                <input type="checkbox" class="custom-control-input" id="activate_select2">
-                                                <label class="custom-control-label" for="activate_select2">Activate select</label>
+                                                <input type="checkbox" class="custom-control-input agreement_select" id="activ_select_edit">
+                                                <label class="custom-control-label" for="activ_select_edit">Activate select</label>
                                             </div>
 
                                             <select name="" id="" class="input_disabled_dataGroup_form select_agreement" disabled="true">
@@ -449,19 +449,7 @@
 
         <script>
             // Función para activar y desactivar el select de la opción agreement de la información personal, modal Scheduled appointment
-            $('#activate_select').on('change', function() {
-                if ( $(this).is(':checked') ) {
-                    $(".select_agreement").prop("disabled", false );
-                    $(".select_agreement").removeClass("input_disabled_dataGroup_form");
-                    $(".select_agreement").addClass("input_dataGroup_form");
-                } else {
-                    $(".select_agreement").prop("disabled", true );
-                    $(".select_agreement").addClass("input_disabled_dataGroup_form");
-                    $(".select_agreement").removeClass("input_dataGroup_form");
-                }
-            });
-
-            $('#activate_select2').on('change', function() {
+            $('.agreement_select').on('change', function() {
                 if ( $(this).is(':checked') ) {
                     $(".select_agreement").prop("disabled", false );
                     $(".select_agreement").removeClass("input_disabled_dataGroup_form");
