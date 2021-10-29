@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcat icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <link rel="icon" href="{{asset('/img/logos/zaabrasalud-favicon.png')}}">
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/plugin/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+        <!-- css del plugin full calendar -->
+        <link rel='stylesheet' href='assets/plugin/full_calendar/lib/main.css'/>
+
+        <link rel='stylesheet' href='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.css'/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <title> Admin </title>
+    </head>
+    <body>
+        <input type="checkbox" id="nav_toggle">
+
+
+        <!-- Sidebar lateral-->
+        <div class="sidebar">
+            <!-- Sección del logo -->
+            <div class="sidebar_logo">
+                <img src="assets/imagenes/image.png" style="height: 55px; width: auto;" alt="">
+            </div>
+
+            <!--Secciones del menu-->
+            <div class="sidebar_menu">
+                <div class="sidebar_user">
+                    <img src="assets/imagenes/Dra-user.jpg" alt="">
+                    <span>Dra. Juliana Rodriguez</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <a id="home" href="">
+                            <i class="fas fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="calendario" href="" class="active">
+                            <i class="fas fa-calendar-alt"></i> <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="historia_clinica" href="">
+                            <i class="fas fa-file-signature"></i> <span>Historia Clínica</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_content ">
+            <!-- Fecha -->
+            <div class="header_info">
+                <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
+            
+                <span>servicioalcliente@zaabrasalud.co</span>
+            </div> 
+            <!-- Sidebar header -->
+            <header class="head_dashboard">
+                <!-- Botón de despliegue -->
+                <h2>
+                    <label for="nav_toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                </h2>
+
+                <div class="dropdown">
+                    <button type="button" class="btn" data-toggle="dropdown">
+                        <div class="user-wrapper">
+                            <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                            <div>
+                                <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu dropdown">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"></a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                  </div>
+            </header>
+
+            <main>
+                <!--Framewor Agenda-->
+                <nav aria-label="breadcrumb" class="agenda_path">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    </ol>
+                </nav>
+
+
+                <div class="container container_principal p-md-0">
+                    <div class="row">
+                        <div class="container_target p-md-0 col-6 col-lg-4 col-md-6 mb-5 mt-5">
+                            <div class="card cards_panelPrincipal">
+                                <a  href=''>
+                                    <div class="card-body card_optionPrincipal ">
+                                        <div class="target-panel">
+                                            <div>
+                                                <i class="fas fa-users" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-muted font-semibold">users</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+ 
+
+        <!-- Script para fullcalendar -->
+        <script src='assets/plugin/full_calendar/lib/main.js'></script>
+        <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
+        
+        <!-- Script para las librerias del autocomplet -->
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+
+        <!-- Script para librerias de bootstrap, llamada por medio de CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <!-- Script para llamar archivo js del proyecto -->
+        <script src='assets/js/menu-lateral.js'></script> 
+
+        <script>
+
+        </script>
+    </body>
+</html>

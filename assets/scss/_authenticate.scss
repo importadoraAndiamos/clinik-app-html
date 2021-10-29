@@ -10,11 +10,13 @@
     margin-top: 7%;
     padding: 3.5px;
     border: 1px solid rgba(0, 174, 199, 45%);
+    border-radius: 3px;
 }
 .card_login {
     padding: 2em 1em;
     background-color: rgb(162, 218, 255);
     background: linear-gradient(20deg, rgba(162, 218, 255) 10%, rgb(196, 239, 248) 50%, rgb(205, 245, 255,5) 80%);
+    border-radius: 3px;
 }
 .card_login label {
     font-family: 'Roboto';
