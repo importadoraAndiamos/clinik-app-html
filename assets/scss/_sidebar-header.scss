@@ -68,6 +68,14 @@ header .user-wrapper h4 {
 header .nav_toggle span {
     cursor: pointer;
 }
+.main_content .head_dashboard .dropdown .btn:focus {
+    box-shadow: none;
+}
+.main_content .head_dashboard .dropdown-menu {
+    min-width: 15em;
+    margin: .7em 0 0;
+}
+
 @media only screen and (max-width: 1200px) {
     header {
         left: 270px;
@@ -88,5 +96,9 @@ header .nav_toggle span {
     #nav_toggle:checked~.main_content header {
         width: 100%;
         left: 0;
+    }
+    .main_content .head_dashboard .dropdown-menu {
+        min-width: 15em;
+        margin: .425em 0 0;
     }
 }

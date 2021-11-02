@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="main_content">
+        <div class="main_content ">
             <!-- Fecha -->
             <div class="header_info">
                 <!-- <i class="far fa-calendar-alt"></i>--><span>Octubre 10 2021</span> 
@@ -73,23 +73,34 @@
                 <span>servicioalcliente@zaabrasalud.co</span>
             </div> 
             <!-- Sidebar header -->
-            <header>
+            <header class="head_dashboard">
                 <!-- Botón de despliegue -->
                 <h2>
                     <label for="nav_toggle">
                         <span class="fas fa-bars"></span>
                     </label>
                 </h2>
-                <!-- Usuario  -->
-                <div class="user-wrapper">
-                    <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
-                    <div>
-                        <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+
+                <div class="dropdown">
+                    <button type="button" class="btn" data-toggle="dropdown">
+                        <div class="user-wrapper">
+                            <img src="assets/imagenes/Dra-user.jpg" width="25px" height="25px" alt="">
+                            <div>
+                                <h4>¡Bienvenido (a)!</h4><h4>Dra. Juliana Rodriguez</h4>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu dropdown">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#"></a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Log out</a>
                     </div>
-                </div>
+                  </div>
             </header>
 
-            <main class="container">
+            <main>
                 <!--Framewor Agenda-->
                 <nav aria-label="breadcrumb" class="agenda_path">
                     <ol class="breadcrumb">
@@ -103,6 +114,7 @@
                         <h1>Mi Calendario</h1>
                         <span>Administre su calendario de citas</span>
                     </div>
+
                 
                     <div class="calendario">
                         <div id='calendar'></div>
@@ -442,9 +454,16 @@
         <!-- Script para fullcalendar -->
         <script src='assets/plugin/full_calendar/lib/main.js'></script>
         <script src='assets/plugin/full_calendar/lib/locales/es.js'></script>
-        <script src='assets/plugin/bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js'></script>
-        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
         
+        <!-- Script para las librerias del autocomplet -->
+        <script src='assets/plugin/autocomplet/jquery-ui-1.13.0.custom/jquery-ui.js'></script>
+
+        <!-- Script para librerias de bootstrap, llamada por medio de CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <!-- Script para llamar archivo js del proyecto -->
         <script src='assets/js/menu-lateral.js'></script> 
 
         <script>
